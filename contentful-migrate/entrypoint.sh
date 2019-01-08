@@ -15,4 +15,4 @@ fi
 
 echo "Initiating Migrations"
 
-node migrate $spaceId $GITHUB_REF $accessToken
+node contentful-migrate/migrate $spaceId $GITHUB_REF $accessToken
