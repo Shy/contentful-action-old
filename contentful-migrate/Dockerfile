@@ -15,3 +15,5 @@ RUN npm install
 
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
+RUN node contentful-migrate/migrate $spaceId $GITHUB_REF $accessToken "${GITHUB_WORKSPACE}/${contentfulMigrationLocation}"
