@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="Calls webhook to trigger rebuild on netl
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="green"
 
-LABEL "repository"="http://github.com/shy/ti4-action"
-LABEL "homepage"="http://github.com/shy/ti4-action"
+LABEL "repository"="https://github.com/Shy/contentful-action"
+LABEL "homepage"="http://github.com/shy/contentful-action"
 LABEL "maintainer"="Shy <shy@contentful.com>"
 
 ADD entrypoint.sh /entrypoint.sh
