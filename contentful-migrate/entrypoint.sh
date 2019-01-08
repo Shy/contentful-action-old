@@ -13,6 +13,19 @@ then
     exit 1
 fi
 
+
+if [[ -z $contentfulMigrationLocation ]];
+then
+    echo "Location for folder containing migration files required. Provide value in contentfulMigrationLocation variable" >&2
+    exit 1
+fi
+
+if [[ ! -d "$contentfulMigrationLocation" &&  ! -f "$contentfulMigrationLocation" ]];
+then
+    echo "Folder location '$contentfulMigrationLocation' does not exist."
+    exit 1
+fi
+
 echo "Initiating Migrations"
 
-node contentful-migrate/migrate $spaceId $GITHUB_REF $accessToken
+node contentful-migrate/migrate $spaceId $GITHUB_REF $accessToken "${GITHUB_WORKSPACE}/${contentfulMigrationLocation}"
