@@ -5,4 +5,5 @@ workflow "New workflow" {
 
 action "Contentful Migration" {
   uses = "./contentful-migrate"
+  secrets = ["accessToken", "spaceId"]
 }
