@@ -4,5 +4,5 @@ workflow "New workflow" {
 }
 
 action "Contentful Migration" {
-  uses = "./"
+  uses = "./contentful-migrate"
 }
