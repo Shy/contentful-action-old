@@ -27,3 +27,5 @@ then
 fi
 
 echo "Initiating Migrations"
+
+node contentful-migrate/migrate
