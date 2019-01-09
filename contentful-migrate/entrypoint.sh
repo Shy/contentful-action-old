@@ -28,4 +28,4 @@ fi
 
 echo "Initiating Migrations"
 
-node contentful-migrate/migrate $spaceId $GITHUB_REF $accessToken "${GITHUB_WORKSPACE}/${contentfulMigrationLocation}"
+node contentful-migrate/migrate
