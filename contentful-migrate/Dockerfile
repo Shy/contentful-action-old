@@ -16,4 +16,4 @@ RUN npm install
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
-RUN node migrate $spaceId $GITHUB_REF $accessToken "${GITHUB_WORKSPACE}/${contentfulMigrationLocation}"
+RUN npm run-script migrate $spaceId $GITHUB_REF $accessToken "${GITHUB_WORKSPACE}/${contentfulMigrationLocation}"
