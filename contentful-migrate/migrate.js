@@ -16,7 +16,11 @@
     //
     // Configuration variables
     //
-    const [,, SPACE_ID, GITHUB_REF, CMA_ACCESS_TOKEN, MIGRATIONS_DIR] = process.argv;
+
+    const SPACE_ID = process.env.spaceId;
+    const GITHUB_REF = process.env.GITHUB_REF
+    const CMA_ACCESS_TOKEN = process.env.accessToken
+    const MIGRATIONS_DIR = process.env.GITHUB_WORKSPACE + "/" + process.env.contentfulMigrationLocation
 
     const client = createClient({
       accessToken: CMA_ACCESS_TOKEN
