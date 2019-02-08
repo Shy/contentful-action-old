@@ -30,4 +30,4 @@ fi
 
 echo "Initiating Migrations"
 
-node $BASEDIR/contentful-migrate/migrate
+node $BASEDIR/migrate
