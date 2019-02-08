@@ -28,4 +28,5 @@ fi
 
 echo "Initiating Migrations"
 
-node contentful-migrate/migrate
+ls -la
+node migrate
