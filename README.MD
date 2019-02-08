@@ -1,4 +1,4 @@
-# GitHub Action for Gatsby CLI
+# GitHub Action for integrating migrations with Contentful
 
 This Action wraps the works in conjunction with the [Contentful Migration CLI](https://www.contentful.com/developers/docs/tutorials/general/scripting-migrations/) to enable migrations to be automatically run as part of code deployment. It also includes function to optionally trigger a rebuild via Netlify.
 
