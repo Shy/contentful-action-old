@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+BASEDIR=$(dirname "$0")
+
 if [ -z "$spaceId" ];
 then
     echo "\$spaceId is not set." >&2
@@ -14,7 +16,7 @@ then
 fi
 
 
-if [[ -z $contentfulMigrationLocation ]];
+if [ -z "$contentfulMigrationLocation" ];
 then
     echo "Location for folder containing migration files required. Provide value in contentfulMigrationLocation variable" >&2
     exit 1
@@ -28,5 +30,4 @@ fi
 
 echo "Initiating Migrations"
 
-ls -la
-node contentful-migrate/migrate
+node $BASEDIR/contentful-migrate/migrate
